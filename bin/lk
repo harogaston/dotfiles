@@ -1,0 +1,2 @@
+#!/bin/sh
+ps -fe | grep -E --color=always $@

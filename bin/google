@@ -1,0 +1,20 @@
+#!/bin/sh
+#temp=$*
+#(rekonq --webapp "https://www.google.com/search?q=$temp" &> /dev/null &)
+
+
+while test $# != 0; do
+	case "$1" in
+		-fl)
+			shift
+			temp=$*
+			(rekonq --webapp "http://www.google.com/search?btnI=I%27m+Feeling+Lucky&q=$temp" &> /dev/null &)
+			break
+			;;
+		*)
+			temp=$*
+			(rekonq --webapp "https://www.google.com/search?q=$temp" &> /dev/null &)
+			break
+			;;
+	esac
+done
