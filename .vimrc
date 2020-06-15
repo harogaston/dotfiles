@@ -16,7 +16,6 @@ set incsearch
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'morhetz/gruvbox'
 Plug 'jremmen/vim-ripgrep'
 Plug 'vim-utils/vim-man'
 Plug 'git@github.com:kien/ctrlp.vim.git'
