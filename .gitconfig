@@ -21,7 +21,4 @@
 	default = simple
 [pull]
 	ff = only
-[url "https://anongit.kde.org/"]
-	insteadOf = kde:
-[url "git@git.kde.org:"]
-	pushInsteadOf = kde:
+
