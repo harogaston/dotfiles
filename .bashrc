@@ -31,9 +31,7 @@ colors() {
 	done
 }
 
-[[ -f ~/.extend.bashrc ]] && . ~/.extend.bashrc
-
-[ -r /usr/share/bash-completion/bash_completion   ] && . /usr/share/bash-completion/bash_completion
+[ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
 
 # Change the window title of X terminals
 case ${TERM} in
