@@ -1,2 +1,62 @@
 #!/bin/sh
-toilet -t -f 3d.flf "$@" | lolcat 
+## Convenient colorful banners
+
+help() {
+    figlet -f Trek -- "Lolban" | lolcat
+	bold="\033[1m"
+	normal="\033[0m"
+	echo -e "${bold}USAGE${normal}:"
+	echo -e "\t lolban [-f <font> | -a] -m <message> -w <width>\n"
+	echo -e "${bold}PARAMS${normal}:"
+	echo -e "\t${bold}-m${normal}\tMessage to print."
+	echo -e "\n${bold}OPTIONAL PARAMS${normal}:"
+	echo -e "\t${bold}-f${normal}\tFont to be used. To choose from /usr/share/figlet/fonts."
+	echo -e "\t${bold}-w${normal}\tMaximum width. Defaults to console width."
+	echo -e "\t${bold}-a${normal}\tPrints <message> secuentially using all installed fonts. Ignores -f.\n"
+	echo -e "${bold}EXAMPLES${normal}:"
+	echo -e "\t lolban -f 3d -w 80 -m 'Hello world!'"
+	echo -e "\t lolban -a -m 'Print them all!'"
+}
+
+# Parameters
+message="Hello world!"
+font="3d"
+width=$(tput cols)
+all=false
+
+while getopts ":hf:m:a" OPTION
+do
+	case $OPTION in
+		h)
+			help
+			exit
+			;;
+		f)
+			font=$OPTARG
+			;;
+		w)
+			width=$OPTARG
+			;;
+		m)
+			message=$OPTARG
+			;;
+        a)
+            all=true
+            ;;
+	esac
+done
+
+main() {
+    if $all ; then
+        for file in $(ls -N --color=never /usr/share/figlet/fonts | cut -f1 -d.);
+        do
+            figlet -f $file -- "$message" 2>/dev/null | lolcat; [ $? -eq 0 ] && echo -e "Font: $file\n"
+        done;
+    else
+        figlet -f $font -w "$width" -- "$message" | lolcat;
+    fi
+    exit 0;
+}
+
+set -o pipefail
+main
