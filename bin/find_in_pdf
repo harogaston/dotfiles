@@ -1,3 +1,0 @@
-#!/bin/sh
-PATTERN=$@
-find . -name '*.pdf' -exec sh -c "pdftotext '{}' - | grep --with-filename --label='{}' --color '${PATTERN}'" \;

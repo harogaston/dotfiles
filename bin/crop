@@ -1,3 +1,0 @@
-#!/bin/sh
-
-find . -name "*.jpg" | xargs -L 1 basename -s .jpg | xargs -L 1 -I {} convert -crop 3x1@ +repage +adjoin {}.jpg {}_%d.jpg
