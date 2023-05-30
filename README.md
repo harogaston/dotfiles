@@ -15,9 +15,3 @@
 3. Execute [`./install.sh`](./install.sh).
     Make sure that you run the script in the main dotfiles directory - `cd ~/.dotfiles`.
 
-## Updating
-To update the dotfiles pull this repo including its submodules.
-
-```
-git pull --recurse-submodules
-```
