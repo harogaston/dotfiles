@@ -17,6 +17,6 @@ st () {
 	stow --target "$HOME" "$@"
 }
 
-st --stow stow
+st --stow stow git
 
 echo "Command executed succesfuly"
