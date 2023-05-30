@@ -1,6 +1,7 @@
 --dir=~/.dotfiles
 --target=~
 --ignore=~
---ignore=.git
---ignore=README.md
---ignore=.gitignore
+--ignore=^/\.git$
+--ignore=^/\.gitignore$
+--ignore=^/README\.md$
+
