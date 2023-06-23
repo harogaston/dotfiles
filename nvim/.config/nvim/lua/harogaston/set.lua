@@ -1,5 +1,8 @@
 -- [[ Main options ]] --
 
+-- Sway specific --
+vim.opt.title = true
+
 -- Leader key
 vim.g.mapleader = ' '
 
