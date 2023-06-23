@@ -9,7 +9,7 @@
 2. Clone this repo:
 
     ```shell
-    git clone https://github.com/harogaston/dotfiles.git $HOME/.dotfiles
+    git clone git@github.com:harogaston/dotfiles.git $HOME/.dotfiles
     cd $HOME/.dotfiles
     ```
 3. Execute [`./install.sh`](./install.sh).
