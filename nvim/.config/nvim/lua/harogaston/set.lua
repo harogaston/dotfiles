@@ -13,9 +13,6 @@ vim.opt.relativenumber = true
 -- Clipboard syncing
 vim.opt.clipboard = 'unnamedplus'
 
--- Save undo history
-vim.opt.undofile = true
-
 -- Case insensitive searching UNLESS /C or capital in search
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
