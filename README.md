@@ -14,4 +14,4 @@
     ```
 3. Execute [`./install.sh`](./install.sh).
     Make sure that you run the script in the main dotfiles directory - `cd ~/.dotfiles`.
-
+    If stow refuses to stow some package due to existing files, simple `adopt <pkg>` and `git checkout .`
