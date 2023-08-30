@@ -1,18 +1,21 @@
 [user]
 	email = harogaston@gmail.com
 	name = Gastón Haro
+	signingkey = D81E0742E8635659CF4942780B79E5FE645938B1
+[commit]
+	gpgsign = true
 [core]
 	editor = nvim
 	quotepath = false
 [credential]
 	helper = cache --timeout=3600
 [alias]
-  sw = switch
-  ch = checkout
-  cc = commit
-  ss = status
-  br = branch
-  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	sw = switch
+	ch = checkout
+	cc = commit
+	ss = status
+	br = branch
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 [push]
 	default = simple
 [pull]
