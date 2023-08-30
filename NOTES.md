@@ -30,8 +30,17 @@
     ssh-add ~/.ssh/github_ed25519
     ssh -T git@github.com
     ```
+5. GitHub gpg key
 
-5. Clone dotfiles repo
+   ```shell
+   gpg --full-generate-key
+   gpg --armor --export <id>
+   git config --global user.signingkey <id>
+   git config --global commit.gpgsign true
+   gpg -o <filename.gpg> --export-options backup --export-secret-keys <id>
+   ```
+
+6. Clone dotfiles repo
 
     ```shell
     git clone git@github.com:harogaston/dotfiles.git $HOME/.dotfiles
