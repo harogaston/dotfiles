@@ -17,6 +17,6 @@ st () {
 	stow --target "$HOME" "$@"
 }
 
-st --stow stow git nvim rofi
+st --stow stow git nvim rofi sway
 
 echo "Command executed succesfuly"
