@@ -24,7 +24,7 @@
 4. GitHub ssh key
 
     ```shell
-    ssh-keygen -t ed25519 -C "harogaston@gmail.com"
+    ssh-keygen -t ed25519 -C "harogaston@gmail.com" -f ~/.ssh/github_ed25519
     cat ~/.ssh/github_ed25519.pub
     eval "$(ssh-agent -s)"
     ssh-add ~/.ssh/github_ed25519
