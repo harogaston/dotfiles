@@ -1,8 +1,6 @@
 {
     "include": [
-        "/usr/share/sway/templates/waybar/config.jsonc"
-    ],
-	"margin-top": 15,
-	"margin-left": 15,
-	"margin-right": 15
+        "$HOME/.config/waybar/modules.jsonc",
+		"$HOME/.config/waybar/custom.jsonc"
+    ]
 }
