@@ -12,4 +12,4 @@ fi
 alias nv=nvim
 export VISUAL=nvim
 export EDITOR=nvim
-export GPG_TTY=$(tty)
+export GPG_TTY=$TTY
