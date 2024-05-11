@@ -17,6 +17,6 @@ st () {
 	stow --target "$HOME" "$@"
 }
 
-st --stow stow git nvim rofi sway waybar
+st --stow stow foot git nvim rofi sway waybar zsh 
 
 echo "Command executed succesfuly"
