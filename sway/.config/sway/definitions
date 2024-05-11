@@ -23,7 +23,7 @@ set $bindsym bindsym --to-code
 set $unbindsym unbindsym --to-code
 
 # background
-set $background /usr/share/backgrounds/manjaro-sway/gruvbox-dark-manjarosway-3840x2160.png
+set $background $HOMW/.config/sway/wallpaper.jpg
 
 # once-script
 set $once /usr/share/sway/scripts/once.sh
